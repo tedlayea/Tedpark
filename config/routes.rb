@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'spots/about' => 'spots#about'
   get 'spots/contact' => 'spots#contact'
 

@@ -12,7 +12,7 @@ class SpotsController < ApplicationController
     @spot=Spot.new
   end
   def create
-    @spot=Spot.create!(spot_params)
+    @spot=current_user.spots.create!(spot_params)
     redirect_to spot_path(@spot)
   end
   def edit
