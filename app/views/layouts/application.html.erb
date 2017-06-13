@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <div id="header">
+      <%= link_to "Home", :root %> |
+      <%= link_to "About", spots_about_path %> |
+      <%= link_to "Contact", spots_contact_path %>
+    </div>
     <%= yield %>
   </body>
 </html>

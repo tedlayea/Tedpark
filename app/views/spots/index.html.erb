@@ -1,1 +1,13 @@
-<h1>Welcome to Tedpark</h1>
+<span id="button" style="background-color:white"> <%= link_to "Spots", spots_path %> </span>
+<span id="tab">
+<span id="button"><%= link_to " Favourites", favourites_path %> </span>
+<p> Welcome, here is the list of your recent spots!!!</p>
+<span id="button">  <%= link_to "New spot (+)", new_spot_path%> </span>
+<div id="list">
+ <% @spots.each do |spot|%>
+ <li>
+   <%= link_to spot.location_name, spot%>
+   <!-- <span class="like"><%= link_to "&hearts;".html_safe, new_favourite_path %> </span> -->
+ </li>
+ <%end%>
+</div>

@@ -1,0 +1,9 @@
+<span id="button"> <%= link_to "Spots", spots_path %></span>
+<span id="tab">
+<span id="button"><%= link_to " Favourites", favourites_path %> </span>
+<svg  height="200" width="200">
+    <circle cx="150" cy="80" r="50" fill="green" />
+    <text fill="Black" font-size="28" font-family="Segoe UI Light" x="130" y="90">
+      <%= link_to "Pin", favourites_path  %>
+    </text>
+</svg>

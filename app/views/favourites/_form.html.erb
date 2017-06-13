@@ -1,0 +1,10 @@
+<%= form_for  @favourite do |f|%>
+<p>
+  Location: <%= @favourite.location_name %>
+</p>
+<p>
+    <%= f.label :"New Nick Name" %>
+    <%= f.text_field :nick_name %>
+    <%= f.submit %>
+  </p>
+<%end %>

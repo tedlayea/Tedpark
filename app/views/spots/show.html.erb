@@ -1,0 +1,13 @@
+<div>Location Image: <%= @spot.location_name%></div>
+<div>Location name: <%= @spot.location_name%></div>
+<div>Location url: <%= @spot.location_url%></div>
+<div>Date created: <%= @spot.created_at%></div>
+<div>Date updated: <%= @spot.updated_at%></div>
+<span>
+  <%= link_to "&hearts;".html_safe, new_favourite_path, class: "fav" %>
+<span> |
+<span id="button">
+  <%= link_to "Back", spots_path %> |
+  <%= link_to "Edit", edit_spot_path(@spot) %> |
+  <%= link_to "Delete", spot_path(@spot) , method: :delete %>
+ </span>

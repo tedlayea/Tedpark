@@ -1,0 +1,13 @@
+<div>Location Image: <%= @favourite.location_name%></div>
+<div>Location name: <%= @favourite.location_name%></div>
+<div>Location url: <%= @favourite.location_url%></div>
+<div>Date created: <%= @favourite.created_at%></div>
+<div>Date updated: <%= @favourite.updated_at%></div>
+<div>Nick name: <%= @favourite.nick_name%></div>
+<span>
+  <span id="button"> <%= link_to "Back", favourites_path %> |
+  <%= link_to "Edit", edit_favourite_path(@favourite) %> |
+</span>
+<span >
+  <%= link_to "&hearts;".html_safe, favourite_path(@favourite), method: :delete, class: "no-fav" %>
+</span>

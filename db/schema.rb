@@ -16,12 +16,18 @@ ActiveRecord::Schema.define(version: 20170613213301) do
   enable_extension "plpgsql"
 
   create_table "favourites", force: :cascade do |t|
+    t.string "location_url"
+    t.string "location_name"
+    t.string "nick_name"
+    t.bigint "spot_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["spot_id"], name: "index_favourites_on_spot_id"
   end
 
   create_table "spots", force: :cascade do |t|
     t.string "location_name"
+    t.string "location_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
