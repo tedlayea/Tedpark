@@ -1,13 +1,24 @@
 <span id="tab"> <span id="button" > <%= link_to "Back", spots_path %> </span>
-<p> Please, Enter the new label name, please.
+<p> Please, Enter the new label name:
 <%= form_for @spot do |f|%>
-
+<img id="current_map" src="https://previews.123rf.com/images/krisckam/krisckam1307/krisckam130700392/21189481-red-pointer-you-are-here-Stock-Vector-here-guide.jpg" alt="Here you are?" />
 <p>
   <%= f.label :"New Label Name" %>
   <%= f.text_field :location_name %>
 </p>
+<p>
+  <%= f.label :"Latitude : " %>
+  <%= "00" %>
+</p>
+<p>
+  <%= f.label :"Longitude : " %>
+  <%= "00" %>
+</p>
+<p>
   <%= f.label :"Current Date and Time : " %>
   <%= Time.now.strftime("%d/%m/%Y %H:%M") %>
+</p>
+
 <p>
    <%= f.submit %>
 </p>
