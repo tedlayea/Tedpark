@@ -1,7 +1,6 @@
 <div>
-  <span id="button"> <%= link_to "Spots", spots_path %></span>
-  <span id="tab">
-  <span id="button"><%= link_to " Favourites", favourites_path %> </span>
+  <span id="tab"> <span id="button"> <%= link_to "Spots", spots_path %></span>
+  <span id="button"><%= link_to "Favourites", favourites_path %> </span>
 <div>
 <svg  id="circlular_button" height="200" width="200">
     <!-- <circle cx="150" cy="80" r="50" fill="green" />
@@ -11,7 +10,7 @@
 </svg>
 
 <div id="information_board">
-  <button id="pin">Pin</button>
+  <button id="pin" style="background-color:yellow">Pin</button>
   <p id="info">  </p>
     <%= image_tag("where_am_I.png", :alt => "Where I am?", :id=>"current_map") %>
 </div>
@@ -29,6 +28,8 @@
           +long+ "<br>Date and Time: "+"<br>Weather:");
       var mapUrl = "http://maps.google.com/maps/api/staticmap?center="+lat+','+long+'&zoom=21&size=600x600&maptype=roadmap&sensor=false';
       var info_image=$("#current_map").attr("src",mapUrl);
+      pin_button.text("To my Car")
+      pin_button.css({"background-color":"Green","color":"Yellow"})
     }
   }
 

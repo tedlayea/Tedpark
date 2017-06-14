@@ -10,7 +10,7 @@ class FavouritesController < ApplicationController
   end
   def create
     @spot=session[:spot_id]
-    @favourite=Favourite.create!(location_url: session[:location_url], location_name: session[:location_name], nick_name:favourite_params )
+    @favourite=Favourite.create!(location_name: session[:location_name], nick_name:favourite_params )
     redirect_to favourites_path
   end
   def edit

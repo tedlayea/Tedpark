@@ -1,9 +1,9 @@
-<div>Location Image: <%= @favourite.location_name%></div>
+<div>Location Image: <%= image_tag("here_you_are.jpg", :alt => "Where I am?", :id=>"current_map") %> </div>
 <div>Location name: <%= @favourite.location_name%></div>
-<div>Location url: <%= @favourite.location_url%></div>
+<div>Nick name: <%= @favourite.nick_name%></div>
 <div>Date created: <%= @favourite.created_at%></div>
 <div>Date updated: <%= @favourite.updated_at%></div>
-<div>Nick name: <%= @favourite.nick_name%></div>
+
 <span>
   <span id="button"> <%= link_to "Back", favourites_path %> |
   <%= link_to "Edit", edit_favourite_path(@favourite) %> |

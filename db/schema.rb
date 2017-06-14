@@ -16,8 +16,9 @@ ActiveRecord::Schema.define(version: 20170613223432) do
   enable_extension "plpgsql"
 
   create_table "favourites", force: :cascade do |t|
-    t.string "location_url"
     t.string "location_name"
+    t.string "latitude"
+    t.string "longitude"
     t.string "nick_name"
     t.bigint "spot_id"
     t.datetime "created_at", null: false
@@ -27,7 +28,8 @@ ActiveRecord::Schema.define(version: 20170613223432) do
 
   create_table "spots", force: :cascade do |t|
     t.string "location_name"
-    t.string "location_url"
+    t.string "latitude"
+    t.string "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"

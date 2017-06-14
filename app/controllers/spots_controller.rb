@@ -1,4 +1,7 @@
 class SpotsController < ApplicationController
+  def home
+    session[:history] ||= []
+  end
   def index
     @spots=Spot.all
   end
@@ -6,13 +9,15 @@ class SpotsController < ApplicationController
     @spot=Spot.find(params[:id])
     session[:spot_id] = @spot.id
     session[:location_name] = @spot.location_name
-    session[:location_url] = @spot.location_url
+    session[:latitude] = @spot.latitude
+    session[:longitude] = @spot.longitude
   end
   def new
     @spot=Spot.new
   end
   def create
     @spot=current_user.spots.create!(spot_params)
+    session[:history].push(@spot)
     redirect_to spot_path(@spot)
   end
   def edit

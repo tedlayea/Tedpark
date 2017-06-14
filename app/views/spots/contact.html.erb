@@ -1,1 +1,11 @@
 <p> Contact address </p>
+<p>From latitude and longtiude to get adress name:<p>
+  <%= location_name()%>
+<p>From location nameto get adress latitude and longtiude respectively:<p>
+
+<%=location_coordinates()%>
+
+
+
+<%= image_tag("http://maps.google.com/maps/api/staticmap?center=38.905,-77.034&zoom=21&size=600x600&maptype=roadmap&sensor=false
+", :alt => "Where I am?", :id=>"current_map") %>

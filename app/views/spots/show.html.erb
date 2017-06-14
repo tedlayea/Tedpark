@@ -1,6 +1,5 @@
-<div>Location Image: <%= @spot.location_name%></div>
+<div>Location Image: <%= image_tag("here_you_are.jpg", :alt => "Where I am?", :id=>"current_map") %> </div>
 <div>Location name: <%= @spot.location_name%></div>
-<div>Location url: <%= @spot.location_url%></div>
 <div>Date created: <%= @spot.created_at%></div>
 <div>Date updated: <%= @spot.updated_at%></div>
 <span>
