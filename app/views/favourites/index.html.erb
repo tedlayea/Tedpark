@@ -6,6 +6,6 @@
 <% @favourites.each do |favourite|%>
 <li>
  <%= link_to favourite.location_name, favourite%>
-   <span> <%= link_to "&hearts;".html_safe, favourite_path(favourite) , method: :delete, class: "no-fav" %>  </span>
+   <span> <%= link_to "&#x2661;".html_safe, favourite_path(favourite) , method: :delete %>  </span>
  </li>
 <%end%>

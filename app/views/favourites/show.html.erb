@@ -3,16 +3,17 @@
   <%= link_to "Edit", edit_favourite_path(@favourite) %> |
 </span>
 <span >
-  <%= link_to "&hearts;".html_safe, favourite_path(@favourite), method: :delete, class: "no-fav" %>
+  <%= link_to "&#x2661;".html_safe, favourite_path(@favourite), method: :delete %>
 </span>
 <div>Location name: <%= @favourite.location_name%></div>
-<div>Street name: <%= location_name(@favourite.latitude.to_i,@favourite.longitude.to_i)%>></div>
+<div>Street name: <%= location_name(@favourite.latitude,@favourite.longitude)%>></div>
 <div>Nick name: <%= @favourite.nick_name%></div>
 <div>Latitude: <%= @favourite.latitude%></div>
 <div>Longitude: <%= @favourite.longitude%></div>
 <div>Date created: <%= @favourite.created_at%></div>
 <div>Date updated: <%= @favourite.updated_at%></div>
 
-
-
-<!-- <div>Location Image: <%= image_tag("here_you_are.jpg", :alt => "Where I am?", :id=>"current_map") %> </div> -->
+<div>
+  <%= image_tag("http://maps.google.com/maps/api/staticmap?center=38.9049489,-77.0336708&zoom=19&size=600x600&maptype=roadmap&sensor=false
+", :alt => "Where I am?", :id=>"show_map") %>
+</div>

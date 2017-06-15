@@ -8,15 +8,16 @@
       <%= link_to "Pin", favourites_path  %> -->
     </text>
 </svg>
-
+<p id="google_map"> </p>
 <div id="information_board">
   <button id="pin" >Pin</button>
-  <!-- <p id="info"> </p> -->
+  <p id="info"> </p>
     <%= image_tag("where_am_I.png", :alt => "Where I am?", :id=>"current_map") %>
 </div>
 <div id="form">
   <%= render "form" %>
 </div>
+
 <script>
   $(document).ready(function(){
     var pin_button=$("#pin");
@@ -26,16 +27,21 @@
     function disply(position) {
       var long = position.coords.longitude
       var lat = position.coords.latitude
-      // .toFixed(3)
-      // var info_text=$("#info").html("Location name: " +lat+"<br>Latitude: " +lat +"<br>Longitude: "+long+ "<br>Date and Time: ");
+      $("#google_map").html("<button>Use Google Map</button>");
       var mapUrl = "http://maps.google.com/maps/api/staticmap?center="+lat+','+long+'&zoom=19&size=600x600&maptype=roadmap&sensor=false';
       var info_image=$("#current_map").attr("src",mapUrl);
-      pin_button.text("Go")
-      // pin_button.css({"background-color":"red","color":"Yellow"})
-      // $("#circlular_button").css("background-color","red")
+      pin_button.hide()
+      // $("#circlular_button").css({"background-color":"red","color":"Yellow"})
       $('input[name="spot[longitude]"]').val(long);
       $('input[name="spot[latitude]"]').val(lat);
+      $("#google_map").on("click",strartGoogleMap)
+      function strartGoogleMap()
+      {
+        console.log("google map started");
+      }
     }
+
+
   }
 
   })

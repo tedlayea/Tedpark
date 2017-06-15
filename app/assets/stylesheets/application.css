@@ -38,8 +38,9 @@ body{
 a.fav {
   color: green;
 }
-a.no-fav {
+a.delete {
   color: red;
+  text-decoration: none;
 }
 #circlular{
   position: relative;
@@ -57,7 +58,7 @@ img{
   height:200px;
 }
 #pin{
-  position: relative;
+  position: absolute;
   left:85px;
   top:-225px;
   font-size: 30px;
@@ -67,7 +68,7 @@ img{
 }
 #current_map{
   position: absolute;
-  top: -55px;
+  top: -80px;
   left:-15px;
 }
 #info{
@@ -100,4 +101,21 @@ img{
   width:160px;
   color: #E9967A;
   font-weight: bolder;
+}
+#show_map{
+  position: relative;
+  left:0px;
+  top:0px;
+}
+#submit{
+  position: relative;
+  left:180px;
+  top:-60px;
+}
+#google_map{
+  position: relative;
+  top:-85px;
+  left:185px;
+  background-color: transparent;
+
 }
