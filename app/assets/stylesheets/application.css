@@ -41,36 +41,41 @@ a.fav {
 a.no-fav {
   color: red;
 }
-#circlular_button{
+#circlular{
   position: relative;
   top:-9px;
-  left:-20px;
-  border: 0px;
-  margin: 0px;
+  left:80px;
 }
+
 #information_board{
   position: relative;
-  top:-150px;
+  top:150px;
   left:15px;
 }
 img{
-  width:300px;
+  width:320px;
   height:200px;
 }
 #pin{
   position: relative;
   left:85px;
-  top:1px;
+  top:-225px;
   font-size: 30px;
   background-color: transparent;
   border: 0px;
   font-weight: bolder;
 }
 #current_map{
-  position: relative;
-  top: 8px;
+  position: absolute;
+  top: -55px;
+  left:-15px;
 }
 #info{
   position: relative;
-  top: 20px;
+  top: -210px;
+}
+#form{
+  position: absolute;
+  top: 160px;
+  left:15px;
 }

@@ -2,8 +2,8 @@
   <span id="button"> <%= link_to "Spots", spots_path %></span><span id="tab">
   <span id="button"><%= link_to "Favourites", favourites_path %> </span>
 <div>
-<svg  id="circlular_button" height="200" width="200">
-    <circle cx="150" cy="80" r="50" fill="green" />
+<svg  id="circlular" height="100" width="100">
+    <circle id="circlular_button" cx="50" cy="50" r="50" fill="green" />
     <!-- <text fill="Black" font-size="28" font-family="Segoe UI Light" x="130" y="90">
       <%= link_to "Pin", favourites_path  %> -->
     </text>
@@ -11,10 +11,12 @@
 
 <div id="information_board">
   <button id="pin" >Pin</button>
-  <p id="info"> 1<br>2<br>3<br>4<br> </p>
+  <!-- <p id="info"> </p> -->
     <%= image_tag("where_am_I.png", :alt => "Where I am?", :id=>"current_map") %>
 </div>
-<%= render "form" %>
+<div id="form">
+  <%= render "form" %>
+</div>
 <script>
   $(document).ready(function(){
     var pin_button=$("#pin");
@@ -24,12 +26,12 @@
     function disply(position) {
       var long = position.coords.longitude.toFixed(3)
       var lat = position.coords.latitude.toFixed(3)
-      var info_text=$("#info").html("Location name: " +lat"Latitude: " +lat +"<br>Longitude: "
-          +long+ "<br>Date and Time: "+"<br> Weather:");
-      var mapUrl = "http://maps.google.com/maps/api/staticmap?center="+lat+','+long+'&zoom=21&size=600x600&maptype=roadmap&sensor=false';
+      // var info_text=$("#info").html("Location name: " +lat+"<br>Latitude: " +lat +"<br>Longitude: "+long+ "<br>Date and Time: ");
+      var mapUrl = "http://maps.google.com/maps/api/staticmap?center="+lat+','+long+'&zoom=17&size=600x600&maptype=roadmap&sensor=false';
       var info_image=$("#current_map").attr("src",mapUrl);
-      pin_button.text("To my Car")
-      pin_button.css({"background-color":"Green","color":"Yellow"})
+      pin_button.text("Go")
+      // pin_button.css({"background-color":"red","color":"Yellow"})
+      // $("#circlular_button").css("background-color","red")
       $('input[name="spot[longitude]"]').val(long);
       $('input[name="spot[latitude]"]').val(lat);
     }

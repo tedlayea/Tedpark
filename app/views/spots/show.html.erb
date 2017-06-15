@@ -1,14 +1,15 @@
-<div>Location Image: <%= image_tag("here_you_are.jpg", :alt => "Where I am?", :id=>"current_map") %> </div>
-<div>Location name: <%= @spot.location_name%></div>
-<div>Latitude: <%= @spot.latitude%></div>
-<div>Longitude: <%= @spot.longitude%></div>
-<div>Date created: <%= @spot.created_at%></div>
-<div>Date updated: <%= @spot.updated_at%></div>
-<span>
-  <%= link_to "&hearts;".html_safe, new_favourite_path, class: "fav" %>
-<span> |
 <span id="button">
   <%= link_to "Back", spots_path %> |
   <%= link_to "Edit", edit_spot_path(@spot) %> |
   <%= link_to "Delete", spot_path(@spot) , method: :delete %>
- </span>
+</span> |
+<span>
+  <%= link_to "&hearts;".html_safe, new_favourite_path, class: "fav" %>
+<span>
+  <div>Location name: <%= location_name(@spot.latitude,@spot.longitude)%>></div>
+  <div>Latitude: <%= @spot.latitude%></div>
+  <div>Longitude: <%= @spot.longitude%></div>
+  <div>Date created: <%= @spot.created_at%></div>
+  <div>Date updated: <%= @spot.updated_at%></div>
+
+<!-- <div>Location Image: <%= image_tag("here_you_are.jpg", :alt => "Where I am?", :id=>"current_map") %> </div> -->
