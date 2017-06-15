@@ -7,6 +7,9 @@
  <% @spots.each do |spot|%>
  <li>
    <%= link_to spot.location_name, spot%>
+   <span >
+     <%= link_to "&#x2661;".html_safe, spot_path(spot), method: :delete, class: "no-fav" %>
+   </span>
    <!-- <span class="like"><%= link_to "&hearts;".html_safe, new_favourite_path %> </span> -->
  </li>
  <%end%>

@@ -6,6 +6,7 @@
   <%= link_to "&hearts;".html_safe, favourite_path(@favourite), method: :delete, class: "no-fav" %>
 </span>
 <div>Location name: <%= @favourite.location_name%></div>
+<div>Street name: <%= location_name(@favourite.latitude.to_i,@favourite.longitude.to_i)%>></div>
 <div>Nick name: <%= @favourite.nick_name%></div>
 <div>Latitude: <%= @favourite.latitude%></div>
 <div>Longitude: <%= @favourite.longitude%></div>

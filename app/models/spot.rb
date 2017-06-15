@@ -5,4 +5,6 @@ class Spot < ApplicationRecord
                    :distance_field_name => :distance,
                    :lat_column_name => :lat,
                    :lng_column_name => :lng
+
+  validates :latitude, :longitude, {presence: true}
 end

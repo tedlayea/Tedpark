@@ -1,6 +1,4 @@
 module SpotsHelper
-  # x=37.791821
-  # y=-77.034
 def location_name (x,y)
   @res=Geokit::Geocoders::GoogleGeocoder.reverse_geocode "x,y"
   # @res= @res[1..50]

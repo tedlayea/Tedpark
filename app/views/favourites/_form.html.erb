@@ -1,11 +1,11 @@
-
+<span id="button"> <div><%= link_to "Back", spots_path %> </div>
 <%= form_for  @favourite do |f|%>
 <!-- <p>
   Location: <%= @favourite.location_name %>
 </p> -->
 <p>
     <%= f.label :"New Nick Name" %>
-    <%= f.text_field :nick_name %>
+    <%= f.text_field :nick_name, :value=> "My Favourite", id: 'nick_name' %>
     <%= f.submit %>
   </p>
 <%end %>

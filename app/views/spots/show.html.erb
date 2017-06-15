@@ -6,10 +6,12 @@
 <span>
   <%= link_to "&hearts;".html_safe, new_favourite_path, class: "fav" %>
 <span>
-  <div>Location name: <%= location_name(@spot.latitude,@spot.longitude)%>></div>
+  <div>Location name: <%= @spot.location_name%></div>
+  <div>Street name: <%= location_name(@spot.latitude.to_i,@spot.longitude.to_i)%>></div>
   <div>Latitude: <%= @spot.latitude%></div>
   <div>Longitude: <%= @spot.longitude%></div>
   <div>Date created: <%= @spot.created_at%></div>
   <div>Date updated: <%= @spot.updated_at%></div>
+
 
 <!-- <div>Location Image: <%= image_tag("here_you_are.jpg", :alt => "Where I am?", :id=>"current_map") %> </div> -->

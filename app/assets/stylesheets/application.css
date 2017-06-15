@@ -79,3 +79,25 @@ img{
   top: 160px;
   left:15px;
 }
+#location_name{
+  width:160px;
+  color: #E9967A;
+  font-weight: bolder;
+}
+#latitude{
+  width:160px;
+  border: 0px;
+  color: #E9967A;
+  font-weight: bolder;
+}
+#longitude{
+  width:160px;
+  border: 0px;
+  color: #E9967A;
+  font-weight: bolder;
+}
+#nick_name{
+  width:160px;
+  color: #E9967A;
+  font-weight: bolder;
+}
