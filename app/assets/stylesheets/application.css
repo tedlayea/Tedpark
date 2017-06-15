@@ -43,8 +43,10 @@ a.no-fav {
 }
 #circlular_button{
   position: relative;
-  top:-50px;
+  top:-9px;
   left:-20px;
+  border: 0px;
+  margin: 0px;
 }
 #information_board{
   position: relative;
@@ -54,4 +56,21 @@ a.no-fav {
 img{
   width:300px;
   height:200px;
+}
+#pin{
+  position: relative;
+  left:85px;
+  top:1px;
+  font-size: 30px;
+  background-color: transparent;
+  border: 0px;
+  font-weight: bolder;
+}
+#current_map{
+  position: relative;
+  top: 8px;
+}
+#info{
+  position: relative;
+  top: 20px;
 }

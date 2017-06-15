@@ -1,6 +1,6 @@
 class SpotsController < ApplicationController
   def home
-    session[:history] ||= []
+    @spot=Spot.new
   end
   def index
     @spots=Spot.all
@@ -17,7 +17,6 @@ class SpotsController < ApplicationController
   end
   def create
     @spot=current_user.spots.create!(spot_params)
-    session[:history].push(@spot)
     redirect_to spot_path(@spot)
   end
   def edit
@@ -35,6 +34,6 @@ class SpotsController < ApplicationController
   end
   private
   def spot_params
-    params.require(:spot).permit(:location_url, :location_name)
+    params.require(:spot).permit(:location_name)
   end
 end
