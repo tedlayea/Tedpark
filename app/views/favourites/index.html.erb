@@ -1,11 +1,15 @@
-<span id="button" > <%= link_to "Spots", spots_path %> </span>
+<span id="tab2"> <span id="spots_favourites" > <%= link_to "Spots", spots_path %> </span>
 <span id="tab">
-<span id="button" style="background-color:white"><%= link_to " Favourites", favourites_path %> </span>
-<p> Welcome, here is the list of your favourite spots!!!</p>
+<span id="spots_favourites" style="background-color:white"><%= link_to " Favourites", favourites_path %> </span>
+<p> Your favourite spots!!!</p>
 
 <% @favourites.each do |favourite|%>
+
 <li>
- <%= link_to favourite.location_name, favourite%>
-   <span> <%= link_to "&#x2661;".html_safe, favourite_path(favourite) , method: :delete %>  </span>
- </li>
+  <p>
+    <%= link_to favourite.location_name, favourite%>
+    <span> <%= link_to "&#x2661;".html_safe, favourite_path(favourite) , method: :delete , class: "delete"%>  </span>
+  </p>
+</li>
+
 <%end%>

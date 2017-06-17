@@ -1,27 +1,25 @@
-<!-- <span id="tab"> <span id="button" > <%= link_to "Back", spots_path %> </span> -->
-<!-- <div><%= image_tag("here_you_are.jpg", :alt => "Here you are?", :id=>"current_map") %> </div> -->
-<!-- <p> Please, Enter the new label name: -->
-<%= form_for @spot do |f|%>
-<p>
-  <%= f.label :"Location Name: " %>
-  <%#= location_name(38.9014847,-77.0391641)%>
-  <%= f.text_field :location_name, :value=> "Somewhere", id: 'location_name' %>
-</p>
+<div >
+  <%= form_for @spot do |f|%>
+  <p>
+    <%= f.label :"Location Name: " %>
+    <%= f.text_field :location_name, :value=> "Somewhere", id: 'location_name' , class: 'form_input'%>
+  </p>
 
-  <%= f.label :"Latitude : " %>
-  <%= f.text_field :latitude, :value=> "0", id: 'latitude' %>
+  <p>
+    <%= f.label :"Latitude : " %>
+    <%= f.text_field :latitude, :value=> "0", id: 'latitude' , class: 'form_input'%>
+  </p>
+  <p>
+    <%= f.label :"Longitude : " %>
+    <%= f.text_field :longitude, :value=> "0" , id: 'longitude', class: 'form_input'%>
+  </p>
+  <p>
+    <%= f.label :"Date & Time: " %>
+    <%= Time.now.strftime("%d/%m/%Y %H:%M") %>
+  </p>
+</div>
+  <p >
+     <%= f.submit "Save" , id: 'save'  %>
+  </p>
 
-<p>
-  <%= f.label :"Longitude : " %>
-  <%= f.text_field :longitude, :value=> "0" , id: 'longitude'%>
-</p>
-<!-- <p>
-  <%= f.label :"Current Date and Time : " %>
-  <%= Time.now.strftime("%d/%m/%Y %H:%M") %>
-</p> -->
-
-<p id= 'submit'>
-   <%= f.submit "Save"  %>
-</p>
-
-<%end %>
+  <%end %>

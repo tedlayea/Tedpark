@@ -1,16 +1,16 @@
-<span id="button" style="background-color:white"> <%= link_to "Spots", spots_path %> </span>
+<span id="tab2">  <span id="spots_favourites" style="background-color:white"> <%= link_to "Spots", spots_path %> </span>
 <span id="tab">
-<span id="button"><%= link_to " Favourites", favourites_path %> </span>
-<p> Welcome, here is the list of your recent spots!!!</p>
-<span id="button">  <%= link_to "New spot (+)", new_spot_path%> </span>
+<span id="spots_favourites"><%= link_to " Favourites", favourites_path %> </span>
+<p> Here are your saved recent spots!!!</p>
+<span id="spots_favourites">  <%= link_to "New spot (+)", new_spot_path%> </span>
 <div id="list">
  <% @spots.each do |spot|%>
  <li>
-   <%= link_to spot.location_name, spot%>
-   <span >
+   <p>
+     <%= link_to spot.location_name, spot%>
      <%= link_to "x", spot_path(spot), method: :delete, class: "delete" %>
-   </span>
+   </p>
+  </li>
    <!-- <span class="like"><%= link_to "&hearts;".html_safe, new_favourite_path %> </span> -->
- </li>
  <%end%>
 </div>

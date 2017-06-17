@@ -1,46 +1,58 @@
 <div>
-  <span id="button"> <%= link_to "Spots", spots_path %></span><span id="tab">
-  <span id="button"><%= link_to "Favourites", favourites_path %> </span>
-<div>
-<svg  id="circlular" height="100" width="100">
-    <circle id="circlular_button" cx="50" cy="50" r="50" fill="green" />
-    <!-- <text fill="Black" font-size="28" font-family="Segoe UI Light" x="130" y="90">
-      <%= link_to "Pin", favourites_path  %> -->
-    </text>
-</svg>
-<p id="google_map"> </p>
-<div id="information_board">
-  <button id="pin" >Pin</button>
-  <p id="info"> </p>
-    <%= image_tag("where_am_I.png", :alt => "Where I am?", :id=>"current_map") %>
+  <span id="tab2"> <span id="spots_favourites"> <%= link_to "Spots", spots_path %> </span> <span id="tab2">
+  <span id="spots_favourites"><%= link_to "Favourites", favourites_path %> </span>
 </div>
-<div id="form">
-  <%= render "form" %>
+<svg  id="circlular" >
+    <circle id="circlular_button" cx="200" cy="200" r="200" fill="green" />
+</svg>
+<button id="pin" >Pin</button>
+<a id="google_map" href="https://www.google.com/maps/"><button id="go" >MyCar</button><a>
+<div>
+    <%= render "form" %>
+</div>
+<div>
+  <%= image_tag("where_am_I.png", :alt => "Where I am?", :id=>"current_map") %>
 </div>
 
 <script>
   $(document).ready(function(){
     var pin_button=$("#pin");
+    var go_button=$("#go");
+    go_button.hide();
     pin_button.on("click",getLocation);
     function getLocation(){
     navigator.geolocation.getCurrentPosition(disply);
     function disply(position) {
-      var long = position.coords.longitude
-      var lat = position.coords.latitude
-      $("#google_map").html("<button>Use Google Map</button>");
-      var mapUrl = "http://maps.google.com/maps/api/staticmap?center="+lat+','+long+'&zoom=19&size=600x600&maptype=roadmap&sensor=false';
+      console.log("getting location started");
+      var long = position.coords.longitude;
+      var lat = position.coords.latitude;
+      var mapUrl = "http://maps.google.com/maps/api/staticmap?center="+lat+','+long+'&zoom=17&size=600x600&maptype=roadmap&sensor=false';
       var info_image=$("#current_map").attr("src",mapUrl);
-      pin_button.hide()
-      // $("#circlular_button").css({"background-color":"red","color":"Yellow"})
+      $("#circlular_button").css({ fill: "#ff0000" });
       $('input[name="spot[longitude]"]').val(long);
       $('input[name="spot[latitude]"]').val(lat);
-      $("#google_map").on("click",strartGoogleMap)
+      var geocoder = new google.maps.Geocoder();
+      var latlng = new google.maps.LatLng(lat, long);
+      geocoder.geocode( { 'latLng': latlng}, function(results, status) {
+      var address = results[0].formatted_address;
+      $('input[name="spot[location_name]"]').val(address);
+        });
+      pin_button.hide()
+      go_button.show();
+      go_button.on("click",strartGoogleMap)
       function strartGoogleMap()
       {
         console.log("google map started");
+        $("#circlular_button").css({ fill: "green" });
+        pin_button.show()
+        go_button.hide();
+        // $(".gsib_a").text("hi")
+        // var mapUrl = "http://maps.google.com/maps/api/staticmap?center="+lat+','+long+'&zoom=17&size=600x600&maptype=roadmap&sensor=false';
+        // $("#google").attr("href",mapUrl);
+        // http://maps.google.com/?saddr=34.052222,-118.243611&daddr=37.322778,-122.031944
+        // $("a[href='http://www.google.com/']").attr('href', 'http://www.live.com/')
       }
     }
-
 
   }
 

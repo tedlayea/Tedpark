@@ -1,12 +1,10 @@
-<span id="button"> <div><%= link_to "Back", spots_path %> </div>
+
 <%= form_for  @favourite do |f|%>
-<!-- <p>
-  Location: <%= @favourite.location_name %>
-</p> -->
+
 <p>
-    <%= f.label :"New Nick Name" %>
-    <%= f.text_field :nick_name, :value=> "My Favourite", id: 'nick_name' %>
-    <%= f.submit %>
-  </p>
+  <%= f.label :"New Nick Name: " %>
+  <%= f.text_field :nick_name, :value=> "My Favourite", id: 'nick_name' , class: 'form_input'%>
+</p>
+<p><%= f.submit "OK" , id: 'add'  %></p>
 <%end %>
-<!-- <div> <%= image_tag("here_you_are.jpg", :alt => "Here you are?", :id=>"current_map") %> </div> -->
+<p><%= link_to "Cancel", spots_path, id:'cancel'%> </p>
