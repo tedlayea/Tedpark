@@ -1,0 +1,16 @@
+<h1> Contact and Comment</h1>
+
+<p> If you need to contact me for any reason, please send me berief message here.
+  <a href="mailto:tedlayea@gmail.com?Subject=Hello%20again" target="_top">Send Mail</a>
+</p>
+
+<p> If you have any comment, suggestion or <br> feedback, click here.<%=link_to "Add comment", new_comment_path     %></p>
+
+  <% @comments.each do |comment|%>
+    <details>
+      <p> By <%= comment.user%> <%= Time.now.strftime("%d/%m/%Y %H:%M") %> </p>
+      <summary>
+        <%= comment.message%></p>
+      </summary>
+    </details>
+  <%end%>

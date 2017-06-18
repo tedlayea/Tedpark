@@ -1,4 +1,5 @@
 class SpotsController < ApplicationController
+
   def home
     @spot=Spot.new
   end
