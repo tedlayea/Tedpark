@@ -5,12 +5,12 @@
 <span id="spots_favourites">  <%= link_to "New spot (+)", new_spot_path%> </span>
 <div id="list">
  <% @spots.each do |spot|%>
- <li>
+
    <p>
      <%= link_to spot.location_name, spot%>
      <%= link_to "x", spot_path(spot), method: :delete, class: "delete" %>
    </p>
-  </li>
+
    <!-- <span class="like"><%= link_to "&hearts;".html_safe, new_favourite_path %> </span> -->
  <%end%>
 </div>

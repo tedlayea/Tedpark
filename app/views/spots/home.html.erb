@@ -1,15 +1,16 @@
 <div>
-  <span id="tab2"> <span id="spots_favourites"> <%= link_to "Spots", spots_path %> </span> <span id="tab2">
-  <span id="spots_favourites"><%= link_to "Favourites", favourites_path %> </span>
+  <span> <%= link_to "Spots", spots_path %> </span> <span id="tab">
+  <span><%= link_to "Favourites", favourites_path %> </span>
 </div>
-<svg  id="circlular" >
-    <circle id="circlular_button" cx="200" cy="200" r="200" fill="green" />
-</svg>
+<div>
+  <svg  id="circlular" >
+    <circle id="circlular_button" cx="40" cy="40" r="40" fill="green">
+  </svg>
+</div>
 <button id="pin" >Pin</button>
 <a id="google_map" href="https://www.google.com/maps/"><button id="go" >MyCar</button><a>
-<div>
-    <%= render "form" %>
-</div>
+
+<%= render "form" %>
 <div>
   <%= image_tag("where_am_I.png", :alt => "Where I am?", :id=>"current_map") %>
 </div>

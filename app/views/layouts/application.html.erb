@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Tedpark</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <%= csrf_meta_tags %>
@@ -10,26 +16,28 @@
   </head>
 
   <body>
-    <div id="header">
-      <%= link_to "Home", :root %> |
-      <%= link_to "About", spots_about_path %> |
-      <%= link_to "Contact", spots_contact_path %>
+    <div class="container-fluid text-center">
+      <nav  class="nav navbar-nav navbar-right">
+        <div id="header">
+          <%= link_to "Home", :root %> |
+          <%= link_to "About", spots_about_path %> |
+          <%= link_to "Contact", spots_contact_path %>
+        </div>
+        <div id="header2">
+          <% if !current_user %>
+              <span class="glyphicon glyphicon-user"></span> <%= link_to "Sign up", new_user_registration_path %>
+              <span class="glyphicon glyphicon-log-in"></span> <%= link_to "Sign in", new_user_session_path %>
+          <% else %>
+              <%= current_user.email %>
+              <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+          <% end %>
+        </div>
+      </nav>
+      <span class="notice"><%= notice %></span>
+      <span class="alert"><%= alert %></span>
+
+      <div><%= yield %></div>
+
     </div>
-    <% if !current_user %>
-      <p>
-        <span id="tab2"><%= link_to "Sign up", new_user_registration_path %><span id="tab2">
-        <%= link_to "Sign in", new_user_session_path %>
-      </p>
-    <% else %>
-      <p>
-        <%= current_user.email %><span id="tab"><span id="tab2">
-        <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-
-      </p>
-    <% end %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <div><%= yield %></div>
   </body>
 </html>

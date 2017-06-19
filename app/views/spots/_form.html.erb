@@ -1,17 +1,17 @@
-<div >
+<div id="form">
   <%= form_for @spot do |f|%>
   <p>
     <%= f.label :"Location Name: " %>
-    <%= f.text_field :location_name, :value=> "Somewhere", id: 'location_name' , class: 'form_input'%>
+    <%= f.text_field :location_name, :placeholder=> "Somewhere", id: 'location_name' , class: 'form_input'%>
   </p>
 
   <p>
     <%= f.label :"Latitude : " %>
-    <%= f.text_field :latitude, :value=> "0", id: 'latitude' , class: 'form_input'%>
+    <%= f.text_field :latitude, :placeholder=> "0", id: 'latitude' , class: 'form_input'%>
   </p>
   <p>
     <%= f.label :"Longitude : " %>
-    <%= f.text_field :longitude, :value=> "0" , id: 'longitude', class: 'form_input'%>
+    <%= f.text_field :longitude, placeholder:"0", id: 'longitude', class: 'form_input'%>
   </p>
   <p>
     <%= f.label :"Date & Time: " %>
@@ -19,7 +19,7 @@
   </p>
 </div>
   <p >
-     <%= f.submit "Save" , id: 'save'  %>
+     <%= f.submit "Save" , class:"btn", id: 'save'  %>
   </p>
 
   <%end %>

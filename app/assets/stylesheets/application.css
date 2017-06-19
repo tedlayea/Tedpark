@@ -13,7 +13,64 @@
  *= require_tree .
  *= require_self
  */
-body{
+ #header{
+   background-color: #000000;
+   color: gold;
+   font-weight: bold;
+ }
+ #header2{
+   background-color: #2F4F4F;
+   color: gold;
+   font-weight: bold;
+ }
+ #tab{
+   margin-left: 20%;
+ }
+ #circlular{
+   position: relative;
+   left: 28%
+ }
+ #form{
+   position: absolute;
+   left:30px;
+   top:175px;
+ }
+ #current_map{
+   position: absolute;
+   left:0px;
+   top:310px;
+   width: 100%;
+ }
+ #pin{
+  background-color: transparent;
+  border: 0px;
+  font-weight: bolder;
+  position: relative;
+  left:-13px;
+  top:-138px;
+  font-size: 40px;
+ }
+ #save{
+   background-color: gray;
+   font-weight: bold;
+   position: absolute;
+   left:300px;
+   top:110px;
+ }
+img{
+  width:100%;
+}
+#google_map{
+  background-color: transparent;
+  border: 0px;
+  position: absolute;
+  left:150px;
+  top:120px;
+}
+ /*#tab{
+   margin-left: 450px;
+ }*/
+/*body{
   padding: 0;
   margin: 0;
   border-color: red;
@@ -22,21 +79,9 @@ body{
   width: 1455px;
   height: 2600px;
   background-color: FFEBCD;
- }
- #header{
-   background-color: black;
-   color: gold;
-   text-align: center;
-   font-weight: bold;
-   font-size: 130px;
- }
- #current_map{
-   position: absolute;
-   top: 1050px;
-   left:25px;
-   width:1460px;
-   height:1600px;
- }
+ }*/
+
+ /*
 p{
   font-size: 70px;
   margin: 0px;
@@ -44,12 +89,8 @@ p{
 li{
     margin-left:50px;
 }
-#tab{
-  margin-left: 450px;
-}
-#tab2{
-  margin-left: 250px;
-}
+
+
 #circlular{
   position: relative;
   top:-40px;
@@ -57,15 +98,7 @@ li{
   width: 400px;
   height: 400px;
 }
-#pin{
- background-color: transparent;
- position: absolute;
- left:520px;
- top:430px;
- font-size: 120px;
- border: 0px;
- font-weight: bolder;
-}
+
 #go{
  background-color: transparent;
  position: absolute;
@@ -163,4 +196,4 @@ summary{
 }
 details{
   font-size: 50px;;
-}
+}*/

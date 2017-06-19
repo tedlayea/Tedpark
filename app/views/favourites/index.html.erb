@@ -4,12 +4,8 @@
 <p> Your favourite spots!!!</p>
 
 <% @favourites.each do |favourite|%>
-
-<li>
   <p>
     <%= link_to favourite.location_name, favourite%>
     <span> <%= link_to "&#x2661;".html_safe, favourite_path(favourite) , method: :delete , class: "delete"%>  </span>
   </p>
-</li>
-
 <%end%>
