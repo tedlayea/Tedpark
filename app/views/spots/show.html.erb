@@ -11,7 +11,7 @@
 <span id="spots_favourites">
   <%= link_to "Back", spots_path %> |
   <%= link_to "Edit", edit_spot_path(@spot) %> |
-  <%= link_to "Delete", spot_path(@spot) , method: :delete %>
+  <%= link_to "Delete", spot_path(@spot) , method: :delete , data: {confirm: 'Are you sure?'} %>
 </span> |
 <span>
   <%= link_to "&hearts;".html_safe, new_favourite_path, class: "fav" %>

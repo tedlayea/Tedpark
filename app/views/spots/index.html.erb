@@ -8,7 +8,7 @@
 
    <p>
      <%= link_to spot.location_name, spot%>
-     <%= link_to "x", spot_path(spot), method: :delete, class: "delete" %>
+     <%= link_to "x", spot_path(spot), method: :delete, class: "delete" , data: {confirm: 'Are you sure?'} %>
    </p>
 
    <!-- <span class="like"><%= link_to "&hearts;".html_safe, new_favourite_path %> </span> -->
