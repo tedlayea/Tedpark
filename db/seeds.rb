@@ -12,11 +12,11 @@ Favourite.destroy_all
 Comment.destroy_all
 
 
-home = Spot.create(location_name: "home",latitude: "0", longitude: "1")
+home = Spot.create(location_name: "home",latitude: "0", longitude: "1" )
 work = Spot.create(location_name: "work", latitude: "2", longitude: "3")
 school = Spot.create(location_name: "school", latitude: "4", longitude: "5")
 spot1 = Spot.create(location_name: "spot1", latitude: "6", longitude: "7")
-spot2 = Spot.create(location_name: "spot2", latitude: "8", longitude: "9" )
+spot2 = Spot.create(location_name: "spot2", latitude: "8", longitude: "9")
 
 
 

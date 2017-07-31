@@ -58,9 +58,10 @@
    left:70%;
    top:20%;
  }
-#go{
+a #go{
    background-color: transparent;
    color: green;
+   border: 0px;
  }
 img{
   width:100%;

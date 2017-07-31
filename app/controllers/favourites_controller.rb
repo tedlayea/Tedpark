@@ -28,6 +28,6 @@ class FavouritesController < ApplicationController
   end
   private
   def favourite_params
-    params.require(:favourite).permit(:nick_name)
+    params.require(:favourite).permit(:nick_name )
   end
 end

@@ -25,13 +25,21 @@ class SpotsController < ApplicationController
   end
   def update
     @spot=Spot.find(params[:id])
-    @spot.update(spot_params)
+    if @spot.user == current_user
+      @spot.update(spot_params)
+    else
+      flash[:alert] = "Only the author of the song can update"
+    end
     redirect_to spot_path(@spot)
   end
   def destroy
     @spot=Spot.find(params[:id])
-    @spot.destroy
-    redirect_to spots_path
+    if @spot.user == current_user
+      @spot.destroy
+    else
+      flash[:alert] = "Only the author of the song can delete"
+    end
+      redirect_to spots_path
   end
   private
   def spot_params

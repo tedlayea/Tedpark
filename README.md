@@ -1,36 +1,45 @@
 # README
+Motivation / Objective:
+* To create an app which easily saves places (with just one click) e.g. where you park and take you there when you want to return.
+* Before starting to built the app, survey conducted using https://docs.google.com/forms/d/e/1FAIpQLSd1ethIS_uZsVv2Gr93t-Ur0foavo9OZKlWbDinJDDHRhK19Q/viewform?c=0&w=1   
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* EDR:
+![alt text](screen_shots/ERD.jpg)
 
+* The Mockup of the program
+![alt text](screen_shots/mockup.jpg)
 
-Things you may want to cover:
+Benefits:
+  * Reduce the time and effort you spend to find your car
+  * Enable you to save important and interesting places quickly while are just passing
+  * Helps to memorize important places when you go to new countries/ cities
 
-* Ruby version
-  Ruby 2.3 used to built this application
-* System dependencies
-  All the system dependency are listed in the Gemfile.
-* The Mockup of the program and the EDR images can be found from image directory.
-* Some of challenges include:
-  Getting current location. Finally done.
-  Integrating Ruby and JavaScript together. But finally done.
-  Some CSS formating and improving functionality. Still to be done.
+Technologies used:
+  * HTML, CSS, Ruby on Rails, and JavaScript
 
-* Future works include:
-  To connect to Google map and search a path, distance and time
-  To change this application in order to fit android and other operating system
+Version:
+  * Ruby 2.3 used to built this application
 
-* Configuration
+System dependencies
+  * All the system dependency are listed in the Gemfile.
 
-* Database creation
-  The Database is created using Postgresql
+  Database creation:
+    * The Database is created using Postgresql
 
-* Database initialization
+  Deployment:
+    * The app deployed using Heroku.  
 
-* How to run the test suite
+  Before running the program:
+    * rails db:drop db:create db:migrate db:seed
 
-* Services (job queues, cache servers, search engines, etc.)
+  Some of the challenges:
+    * Getting current location. Finally done.
+    * Integrating Ruby and JavaScript together. But finally done.
+    * Some CSS formatting and improving functionality. Still to be done.
 
-* Deployment instructions
+  Future works include:
+    * To connect to Google map and search a path, distance and time.
+    * To change this application in order to fit Android and other operating systems
 
-* ...
+  Screen shot of the image be found from image directory.
+  ![alt text](screen_shots/tedpark3.png)  ![alt text](screen_shots/Screenshot-7.png)
