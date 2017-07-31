@@ -1,5 +1,6 @@
 # README
 Motivation / Objective:
+
 * To create an app which easily saves places (with just one click) e.g. where you park and take you there when you want to return.
 * Before starting to built the app, survey conducted using https://docs.google.com/forms/d/e/1FAIpQLSd1ethIS_uZsVv2Gr93t-Ur0foavo9OZKlWbDinJDDHRhK19Q/viewform?c=0&w=1   
 
