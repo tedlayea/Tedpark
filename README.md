@@ -8,7 +8,7 @@ Motivation / Objective:
 ![alt text](screen_shots/ERD.jpg)
 
 * The Mockup of the program
-![alt text](screen_shots/mockup.jpg)
+* ![alt text](screen_shots/mockup.jpg)
 
 Benefits:
   * Reduce the time and effort you spend to find your car
@@ -43,4 +43,4 @@ System dependencies
     * To change this application in order to fit Android and other operating systems
 
   Screen shot of the image be found from image directory.
-  ![alt text](screen_shots/tedpark3.png)  ![alt text](screen_shots/Screenshot-7.png)
+  ![alt text](screen_shots/tedpark3.png)  ![alt text](screen_shots/tedpark6.png)
