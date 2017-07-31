@@ -5,7 +5,7 @@ Motivation / Objective:
 * Before starting to built the app, survey conducted using https://docs.google.com/forms/d/e/1FAIpQLSd1ethIS_uZsVv2Gr93t-Ur0foavo9OZKlWbDinJDDHRhK19Q/viewform?c=0&w=1   
 
 * EDR:
-![alt text](screen_shots/ERD.jpg)
+* ![alt text](screen_shots/ERD.jpg)
 
 * The Mockup of the program
 * ![alt text](screen_shots/mockup.jpg)
@@ -43,4 +43,4 @@ System dependencies
     * To change this application in order to fit Android and other operating systems
 
   Screen shot of the image be found from image directory.
-  ![alt text](screen_shots/tedpark3.png)  ![alt text](screen_shots/tedpark6.png)
+  * ![alt text](screen_shots/tedpark3.png)  ![alt text](screen_shots/tedpark6.png)
