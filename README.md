@@ -2,7 +2,7 @@
 Motivation / Objective:
 
 * To create an app which easily saves places (with just one click) e.g. where you park and take you there when you want to return.
-* Before starting to built the app, survey conducted using https://docs.google.com/forms/d/e/1FAIpQLSd1ethIS_uZsVv2Gr93t-Ur0foavo9OZKlWbDinJDDHRhK19Q/viewform?c=0&w=1   
+* Before starting to built the app, a survey conducted using https://docs.google.com/forms/d/e/1FAIpQLSd1ethIS_uZsVv2Gr93t-Ur0foavo9OZKlWbDinJDDHRhK19Q/viewform?c=0&w=1   
 
 * EDR:
 * ![alt text](screen_shots/ERD.jpg)
@@ -24,23 +24,23 @@ Version:
 System dependencies
   * All the system dependency are listed in the Gemfile.
 
-  Database creation:
-    * The Database is created using Postgresql
+Database creation:
+ * The Database is created using Postgresql
 
-  Deployment:
-    * The app deployed using Heroku.  
+Deployment:
+ * The app deployed using Heroku.  
 
-  Before running the program:
-    * rails db:drop db:create db:migrate db:seed
+Before running the program:
+ * rails db:drop db:create db:migrate db:seed
 
-  Some of the challenges:
-    * Getting current location. Finally done.
-    * Integrating Ruby and JavaScript together. But finally done.
-    * Some CSS formatting and improving functionality. Still to be done.
+Some of the challenges:
+  * Getting current location. Finally done.
+  * Integrating Ruby and JavaScript together. But finally done.
+  * Some CSS formatting and improving functionality. Still to be done.
 
-  Future works include:
-    * To connect to Google map and search a path, distance and time.
-    * To change this application in order to fit Android and other operating systems
+Future works include:
+  * To connect to Google map and search a path, distance and time.
+  * To change this application in order to fit Android and other operating systems
 
-  Screen shot of the image be found from image directory.
+Screen shot of the image be found from image directory.
   * ![alt text](screen_shots/tedpark3.png)  ![alt text](screen_shots/tedpark6.png)
