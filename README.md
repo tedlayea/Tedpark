@@ -42,5 +42,5 @@ Future works include:
   * To connect to Google map and search a path, distance and time.
   * To change this application in order to fit Android and other operating systems
 
-Screen shot of the image be found from image directory.
+Screen shot of the image can be found from screen_shots directory.
   * ![alt text](screen_shots/tedpark3.png)  ![alt text](screen_shots/tedpark6.png)
