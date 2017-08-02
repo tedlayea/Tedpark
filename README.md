@@ -41,6 +41,7 @@ Some of the challenges:
 Future works include:
   * To connect to Google map and search a path, distance and time.
   * To change this application in order to fit Android and other operating systems
+The app is deployed using Heroku and can be found: https://tedpark.herokuapp.com/ 
 
 Screen shot of the image can be found from screen_shots directory.
   * ![alt text](screen_shots/tedpark3.png)  ![alt text](screen_shots/tedpark6.png)
