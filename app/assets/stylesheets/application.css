@@ -17,17 +17,20 @@
    background-color: #000000;
    color: gold;
    font-weight: bold;
+   text-align: center;
  }
  #header2{
    background-color: #2F4F4F;
    color: gold;
    font-weight: bold;
+   text-align: center;
  }
  #tab{
    margin-left: 20%;
  }
  #circlular{
    position: absolute;
+   top:13%;
    left: 40%
  }
  #form{
@@ -77,4 +80,16 @@ img{
 }
 .form_input{
   border: 0px;
+}
+@media only screen and (min-width: 961px) {
+  #current_map {
+    width: 35%;
+    position: absolute;
+    left:30%;
+  }
+  #circlular{
+    position: absolute;
+    top:13%;
+    left: 40.7%;
+  }
 }
