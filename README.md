@@ -7,7 +7,7 @@ Motivation / Objective:
 * EDR:
 * ![alt text](screen_shots/ERD.jpg)
 
-* The Mockup of the program
+* The Mockup of the program:
 * ![alt text](screen_shots/mockup.jpg)
 
 Benefits:
